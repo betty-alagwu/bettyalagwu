@@ -1,0 +1,127 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+
+
+export const meta = {
+  author: ' Betty Alagwu',
+  date: '2023-01-16',
+  title: 'Submitting your first open source pull request: A step by step guide',
+  description:
+    'When I started to code, making a pull request sounded like an incredibly complicated task. Today, I hope to make it look a lot less complicated than it seemed to me.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+After learning the technologies i needed to keepoff my career as a developer, i was very passionate and excited about contributing to open source. I didn't know where to begin at first, after watching over 30 videos on youtube and reading over 20 blog post, i was still very confused.
+
+Now i am going to show you the step by step guide to making your first open source contribution.
+
+
+## How to make your first open source contribution?
+
+Before you contribute to any project on open source, firstly you need to understand how the project works, the problem they are trying solve, and the technologies they are using. 
+
+You can do this by reading the project's documentation. You can also ask questions in the project's chat room, the forum or the project issue tracker.
+
+These are the steps i took when i was making my first open source contribution:
+
+###  Find a project you want to contribute to.
+
+ When i was reserching on the project i wanted to work on, i came across a project called [joplin](https://joplinapp.org/). 
+I was very interested in the project and i wanted to contribute to it. I read the project's documentation and i was able to understand the project and i was ready to contribute to it.
+
+
+
+### Finding the issue you want to work on.
+
+After finding the project i wanted to contribute to, i went to the project's issue tracker and i found an issue i wanted to work on. The issue was about adding a new feature to the project. I read the issue and i was able to understand the issue and i was ready to work on it.
+
+![joplin repository issues](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1674099994/image-6_b9ftbq.png)
+
+
+
+### Fork the project/repository.
+
+Forking a project will instantly create a copy of the project in your github account. You can make changes to the project without affecting the original project. To fork a project, go to the project's github page and click on the fork button. After  selecting on the issue i wanted to work on, i forked the project to my repository.
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1674100220/image-7_uzwldr.png)
+
+### Cloning the project/repository.
+
+After forking the project, you need to clone the project to your local machine. To clone the project, go to your github account and click on the project you forked. Click on the code button and copy the url. Open your terminal and run the command below:
+
+```bash
+git clone [url]
+``` 
+
+
+### Creating a new branch.
+
+After cloning the project, you need to create a new branch. When working with repositories, you need to create a copy of the master branch. You can make changes to the branch without affecting the master branch. To create a new branch, run the command below:
+
+```bash
+git checkout -b [branch-name]
+```
+
+### Making changes to the project.
+
+After creating a new branch, i made changes to the project by solving the issue i picked on earlier. You can make changes to the project using your favorite code editor. After making changes to the project, you need to add the changes to the staging area. To add the changes to the staging area, run the command below:
+
+```bash
+git add .
+```
+
+### Committing the changes.
+
+After adding the changes to the staging area, you need to commit the changes. Committing the changes will save the changes to your local repository. To commit the changes, run the command below:
+
+```bash 
+git commit -m "commit message"
+```
+
+### Pushing the changes to the remote repository.
+
+Pushing the changes will save the changes to your remote repository. but first you need to add the remote repository. To add the remote repository, run the command below:
+
+```bash
+git remote add origin [url]
+```
+After adding the remote repository, you need to push the changes to your remote repository. To push the changes, run the command below:
+
+```bash
+git push origin [branch-name]
+```
+
+### Creating a pull request.
+
+After pushing the changes to your remote repository, on your github web browser, refresh the page, a pop-up button will appear that says `compare & pull request` .
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1674409948/pull-request-image_m8dufo.png)
+
+A pull request is a request to the project owner to merge your changes to the project. To create a pull request, click on the pull request button. 
+
+After creating a pull request, you need to wait for the project owner to review your pull request. Create a video describing the changes you made and how you've solved the problem. In this stage, the project owner gives feedback to the changes you made. If the project owner approves your pull request, your pull request will be merged to the project.
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1674100955/image-14_yzui17.png)
+
+Congratulations! You have successfully made your first open source contribution.
+
+## Conclusion
+
+Making your first open source contribution can be very intimidating. But with the right guidance, you can make your first open source contribution. I hope this article has helped you to understand how to make your first open source contribution. If you have any questions, feel free to reach me on any of my social media. I will be happy to answer your questions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
