@@ -264,9 +264,9 @@ export default function Home({ articles }) {
             Software engineer, Product Manager, and a traveler.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Betty, a Nigerian software engineer with a passion for developing modern, user-focused web applications. 
+            I&apos;m Betty, a Nigerian software engineer with a passion for developing modern, user-focused web applications. 
             Leveraging my expertise in React, Typescript, Node.js, and other emerging technologies.
-            I'm passionate about building products that makes a difference.
+            I&apos;m passionate about building products that makes a difference.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
