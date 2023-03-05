@@ -2,3 +2,7 @@
 @import 'tailwindcss/components';
 @import './prism.css';
 @import 'tailwindcss/utilities';
+
+.article-content img {
+  @apply rounded-md border border-gray-300 dark:border-0;
+}
