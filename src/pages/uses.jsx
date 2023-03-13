@@ -41,29 +41,24 @@ export default function Uses() {
       >
         <div className="space-y-20">
           <ToolsSection title="Workstation">
-            <Tool title="13” MacBook Pro, 64GB RAM (2017)">
-              I was using an Intel-based 16” MacBook Pro prior to this and the
-              difference is night and day. I’ve never heard the fans turn on a
-              single time, even under the incredibly heavy loads I put it
-              through with the various packages i install.
+            <Tool title="14” MacBook Pro, 16GB RAM (2021)">
+              I was using an Intel-based 13” MacBook Pro prior to this and the
+              difference is night and day. Running a docker project on my old laptop would have the fan
+              screaming. Now, I run multiple projects and everything is a breeze.
             </Tool>
-            <Tool title="samsung 32inches Display screen">
-              The only display that fits the workload if you want something
-              bigger than 32”. When you’re always building, every pixel you can
-              get counts.
+            <Tool title="Xiaomi Mi Curved 32” Display screen">
+              It just gives me so much more space to work with. It's also good for my working posture, since I can keep my head up and 
+              not look down on my laptop screen.
             </Tool>
             <Tool title="Apple Magic Keyboard">
               I love the fact that it is wireless and has a numeric keypad, long
               lasting battery life, and a great typing experience.
             </Tool>
             <Tool title="Apple Magic Mouse">
-              Something about all the gestures makes me feel like a wizard with
-              special powers. I really like feeling like a wizard with special
-              powers.
+             It's wireless, it's battery is long lasting, and it's extremely easy to use. Makes me work faster.
             </Tool>
             <Tool title="GTRacing Chair">
-              If I’m going to slouch in the worst ergonomic position imaginable
-              all day, I might as well do it in an expensive chair.
+              My back used to hurt. It doesn't anymore.
             </Tool>
             <Tool title="None Branded Standing Desk">
               One of the best items I’ve ever bought. I’ve been using it for
@@ -80,13 +75,6 @@ export default function Uses() {
             <Tool title="Github">
               GitHub is a powerful collaboration tool and development platform
               for code review and code management.
-            </Tool>
-          </ToolsSection>
-          <ToolsSection title="Design">
-            <Tool title="Figma">
-              I started using Figma as just a design tool but now it’s become
-              my virtual whiteboard. Never would have
-              expected the collaboration features to be the real hook.
             </Tool>
           </ToolsSection>
         </div>

@@ -7,40 +7,40 @@ export const meta = {
   title:
     'Performance vs user experience: The hard choices of a frontend engineer',
   description:
-    'As a frontend engineer, balancing performance and user experience is a tough task. Prioritizing one over the other can sacrifice the opposite. In this article, I will share my experience and the decisions I made when building the heyme application that is fast and accessible.'
+    'As a frontend engineer, balancing performance and user experience is a tough task. Prioritizing one over the other can sacrifice the opposite. In this article, I will share my experience and the decisions I made when building the heyme application that is fast and accessible.',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-In the proccess of developing [heyme](https://heyme.io/), an online platform that is designed to send a recording message to your future self, i encountered a significant challenge related to user conversion.
+In the proccess of developing [heyme](https://heyme.io/), an online platform that is designed to send a recording message to your future self, I encountered a significant challenge related to user conversion.
 
-Specifically, i had embedded a video (default HTML element) into the landing page as a way to entice users on visiting the application and also to give them a feel of what the application is about.
+Specifically, I had embedded a video (default HTML element) into the landing page as a way to entice users on visiting the application and also to give them a feel of what the application is about.
 But quickly realized the video was looking unappealing.
 
-Despite my initial assumption that the embedded video would enhance the user experience, i soon discovered that it was not displaying correctly across all devices. While the video looked great on IOS devices, it appeared distorted and unappealing on other platforms, particularly on Google Chrome browser.
+Despite my initial assumption that the embedded video would enhance the user experience, I soon discovered that it was not displaying correctly across all devices. While the video looked great on IOS devices, it appeared distorted and unappealing on other platforms, particularly on Google Chrome browser.
 
-After analizing the problem in greater depth, i had come accross a new package called [react-html5video](https://www.npmjs.com/package/react-html5video) that would allow me create a more visually appealing video player that would work across all devices.
+After analizing the problem in greater depth, I had come accross a new package called [react-html5video](https://www.npmjs.com/package/react-html5video) that would allow me create a more visually appealing video player that would work across all devices.
 
-However, after checking the package size, i realized that it would add an additional 43.4KB to the minified code, based on [bundlephobia](https://bundlephobia.com/), download time on slow 3G devices would be a staggering 239ms.
+However, after checking the package size, I realized that it would add an additional 43.4KB to the minified code, based on [bundlephobia](https://bundlephobia.com/), download time on slow 3G devices would be a staggering 239ms.
 
 ![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1677546965/bundlephobia_oadcpu.png)
 
 This presented a significant dilemma, as the package would ubdoubtedly enhance the user experience and help to increase engagement with the platform, but at the cost of significantly slowing down the load time for users on slow or unstable connections.
 
-After much consideration , i ultimately decided to use the best solution that a frontend engineer has which is `measurement.`
+After much consideration , I ultimately decided to use the best solution that a frontend engineer has which is `measurement.`
 
-Using measurement, i opted to include the package in my bundle, deploy the application, and run lighthouse test to evaluate the performance impact of the video player. To my relief, the user experience was exceptional, just as i had hoped, and lighthouse score remained at 100%.
+Using measurement, I opted to include the package in my bundle, deploy the application, and run lighthouse test to evaluate the performance impact of the video player. To my relief, the user experience was exceptional, just as I had hoped, and lighthouse score remained at 100%.
 
 ![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1677550010/Screenshot_2023-02-28_at_3.05.43_AM_dbrs1r.png)
 
 I explored the lighthouse further more to be sure it wasn't because of my high internet speed (100mps which is not bad for lagos nigeria). The optimization techniques had helped to minimize any negative impact on the landing page's performance.
 
-As discussed this dilemma with other senior frontend engineers, i learned that striking balance between user experience and performance is critical in software development.
+As discussed this dilemma with other senior frontend engineers, I learned that striking balance between user experience and performance is critical in software development.
 
-As i began exploring new ways to improve the [heyme](https://heyme.io/) platform, i considered implementing a testimonial slider to make the testimonial section more visually appealing. However, i discovered that the [react-slick-dynamic](https://www.npmjs.com/package/react-slick-dynamic) was a hefty 60.1KB in size.
+As I began exploring new ways to improve the [heyme](https://heyme.io/) platform, I considered implementing a testimonial slider to make the testimonial section more visually appealing. However, I discovered that the [react-slick-dynamic](https://www.npmjs.com/package/react-slick-dynamic) was a hefty 60.1KB in size.
 
 ![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1678031532/future-me/l6ypijawfzecr8cgijlj.gif)
 
-With the lessons learned from my previous experience in mind, i settled on using a grid layout for the testimonial section, which would still be visually pleasing and deliver a great user experience without compromising the performance of the landing page.
+With the lessons learned from my previous experience in mind, I settled on using a grid layout for the testimonial section, which would still be visually pleasing and deliver a great user experience without compromising the performance of the landing page.
 
 This experience thought me a valuable lesson in the importance of considering the tradeoffs between performance and user experience in software development.

@@ -65,43 +65,43 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved building things for as long as I can remember, i
+                I’ve loved building things for as long as I can remember, I
                 wrote my first program 1 years ago.
                 <br />
                 <br />
-                It was difficult but i was so determined to learn how to code.
+                It was difficult but I was so determined to learn how to code.
                 My key factor on learning is
                 <em>`Repetition and Consistency`</em>.
                 <br />
                 <br />
-                Tho i have struggled with consistency for a long time but i was
-                much more determined to make sure i accomplish my goals on
+                Tho I have struggled with consistency for a long time but I was
+                much more determined to make sure I accomplish my goals on
                 becoming a software engineer.
               </p>
               <p>
-                Before i decided to become a software engineer, i was working as
-                a marketer for a company, i was so good at it that i was able to
+                Before I decided to become a software engineer, I was working as
+                a marketer for a company, I was so good at it that I was able to
                 get a lot of clients for the company.
                 <br />
                 <br />
-                I was happy with the job i was doing, but i was not entirely
-                satisfied beacuse i felt im not growing and adding so much value
-                to the commmunity as i wanted.
+                I was happy with the job I was doing, but I was not entirely
+                satisfied beacuse I felt im not growing and adding so much value
+                to the commmunity as I wanted.
                 <br />
                 <br />
-                Then i decided to learn how to code, i was able to learn how to
+                Then I decided to learn how to code, I was able to learn how to
                 code in 8 months.
                 <br />
-                <br />I was so happy with the result, i decided to start
+                <br />I was so happy with the result, I decided to start
                 contributing on open source projects
               </p>
               <p>
-                The only thing i love aside computers is traveling and table
+                The only thing I love aside computers is traveling and table
                 tennis.
                 <br />
                 <br />
-                When i was little i would play table tennis with my brothers
-                even when i was loosing i would still play and play until i won.
+                When I was little I would play table tennis with my brothers
+                even when I was loosing I would still play and play until I won.
                 <br />
                 It was such a fun experience.
               </p>

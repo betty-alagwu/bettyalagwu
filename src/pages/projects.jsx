@@ -1,25 +1,25 @@
 import Image from 'next/image'
 import Head from 'next/head'
-
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoText from '@/images/logos/logoText.png'
-import ChrisUI from '@/images/logos/ChrisUI.png'
+import heyme from '@/images/logos/heyme.png'
+
 
 const projects = [
   {
-    name: 'Joplin',
+    name: 'Hey me',
+    description:
+      'Send yourself a message to the future.',
+      link: { href: 'https://heyme.io/', label: 'Heyme.io' },
+    logo: heyme,
+  },
+  {
+    name: 'Joplin (Open source)',
     description:
       'Joplin is an open source note-taking app. Capture your thoughts and securely access them from any device.',
     link: { href: 'https://joplinapp.org/', label: 'Joplin.org' },
     logo: logoText,
-  },
-  {
-    name: 'ChRisUI',
-    description:
-      'ChRIS is principally used for the analysis of medical data such as radiological images, and allows for the creation and automation of complex workflows involving open source data analysis tools that would otherwise be inaccessible to medical researchers and practitioners.',
-    link: { href: 'https://github.com/FNNDSC/ChRIS_ui', label: 'github.com' },
-    logo: ChrisUI,
   },
 ]
 
@@ -41,12 +41,12 @@ export default function Projects() {
         <title>Projects - Betty Alagwu</title>
         <meta
           name="description"
-          content="Things I’ve made trying to put my dent in the community."
+          content="Changing the world one line of code at a time."
         />
       </Head>
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the community."
-        intro="I’ve worked on  projects over the months but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        title="Changing the world one line of code at a time."
+        intro="I love contributing to open source, and I love building projects that have actual business value. Here's a select list of the latest things I've built. If you're interested in building something with me, do not hesitate to send me an email or chat me up on Twitter."
       >
         <ul
           role="list"
@@ -55,6 +55,7 @@ export default function Projects() {
           {projects.map((project) => (
             <Card as="li" key={project.name}>
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              
                 <Image
                   src={project.logo}
                   alt=""
