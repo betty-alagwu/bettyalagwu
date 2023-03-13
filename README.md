@@ -1,42 +1,41 @@
-# Spotlight
+<div align="center">
+<h1>Betty</h1>
+<h6><i>Software Engineer,  </i></h6>
+<h6><i>Product Manager & Traveler. </i></h6>
+<hr />
+</div>
 
-Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+This project is my personal website that serves as an online portfolio and blog. The website is built using modern web technologies including HTML, Tailwind CSS , and JavaScript, Next.js.
 
-## Getting started
 
-To get started with this template, first install the npm dependencies:
+## Features 
+The website has the following features:
 
-```bash
-npm install
-```
+- Responsive design that adapts to different screen sizes
+- Home page with a brief introduction about me
+- Project page showcasing my projects
+- Article page with articles about various topics
+- Uses page showcasing my work enviroment and what what i use to get my job done.
+- Navigation menu for easy navigation throughout the website
 
-Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` variable to your site's public URL:
 
-```
-NEXT_PUBLIC_SITE_URL=https://example.com
-```
+## General Setup
 
-Next, run the development server:
 
-```bash
-npm run dev
-```
+1. Prerequisites
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+   On all platforms:
 
-## Customizing
+   - Install Node version 16.4.0
+   - Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install)
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+2. Clone the repo
 
-## License
+   ```
+   git clone <your fork>
+   ```
 
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
+4. Run the development server:
 
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [MDX](https://mdxjs.com) - the MDX documentation
+   ```
+   yarn dev
