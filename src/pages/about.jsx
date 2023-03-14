@@ -65,45 +65,40 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved building things for as long as I can remember, I
-                wrote my first program 1 years ago.
-                <br />
-                <br />
-                It was difficult but I was so determined to learn how to code.
-                My key factor on learning is
-                <em>`Repetition and Consistency`</em>.
-                <br />
-                <br />
-                Tho I have struggled with consistency for a long time but I was
-                much more determined to make sure I accomplish my goals on
-                becoming a software engineer.
+               A software engineer living in Lagos Nigeria. I build solutions to business problems by creating delightful frontend experiences 
+               and performant applications. 
+              <br/>
+              <br/>
+               My personal values are growth, honesty & transparency, and kindness & empathy.
               </p>
               <p>
-                Before I decided to become a software engineer, I was working as
-                a marketer for a company, I was so good at it that I was able to
-                get a lot of clients for the company.
-                <br />
-                <br />
-                I was happy with the job I was doing, but I was not entirely
-                satisfied beacuse I felt im not growing and adding so much value
-                to the commmunity as I wanted.
-                <br />
-                <br />
-                Then I decided to learn how to code, I was able to learn how to
-                code in 8 months.
-                <br />
-                <br />I was so happy with the result, I decided to start
-                contributing on open source projects
+              Over the years, I have gained experience in a variety of areas, including web development & product management. 
+              <br/>
+              <br/>
+              I am particularly interested in creating delightful frontend experiences
+               and high-performance applications that meet the needs of end-users.
               </p>
               <p>
-                The only thing I love aside computers is traveling and table
-                tennis.
-                <br />
-                <br />
-                When I was little I would play table tennis with my brothers
-                even when I was loosing I would still play and play until I won.
-                <br />
-                It was such a fun experience.
+              In terms of technical skills, I am proficient in a range of programming languages, including HTML, Tailwind CSS, JavaScript. 
+              <br/>
+              <br/>
+              I have experience working with popular frameworks such as React, Nextjs, and Typescript, 
+              and I am comfortable working with a variety of tools such as Git, and Docker.
+              </p>
+              <p>
+              I approach every project with an open mind and a willingness to learn from others, 
+              and I strive to build strong, positive relationships with my colleagues and clients.
+              </p>
+              <p>
+              In my free time, I enjoy exploring new places, trying new foods, 
+              and staying active through exercise and playing video games.
+              <br/>
+              <br/>
+               <p>
+               Thank you for taking the time to learn more about me. I am excited to connect with you and explore how we can work together to create meaningful solutions to business problems.
+               </p>
+
+
               </p>
             </div>
           </div>
