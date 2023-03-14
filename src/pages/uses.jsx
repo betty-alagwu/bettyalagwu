@@ -47,7 +47,7 @@ export default function Uses() {
               screaming. Now, I run multiple projects and everything is a breeze.
             </Tool>
             <Tool title="Xiaomi Mi Curved 32” Display screen">
-              It just gives me so much more space to work with. It's also good for my working posture, since I can keep my head up and 
+              It just gives me so much more space to work with. It&apos;s also good for my working posture, since I can keep my head up and 
               not look down on my laptop screen.
             </Tool>
             <Tool title="Apple Magic Keyboard">
@@ -55,13 +55,13 @@ export default function Uses() {
               lasting battery life, and a great typing experience.
             </Tool>
             <Tool title="Apple Magic Mouse">
-             It's wireless, it's battery is long lasting, and it's extremely easy to use. Makes me work faster.
+             It&apos;s wireless, it&apos;s battery is long lasting, and it&apos;s extremely easy to use. Makes me work faster.
             </Tool>
             <Tool title="GTRacing Chair">
-              My back used to hurt. It doesn't anymore.
+              My back used to hurt. It doesn&apos;t anymore.
             </Tool>
             <Tool title="None Branded Standing Desk">
-              One of the best items I’ve ever bought. I’ve been using it for
+              One of the best items I&apos;ve ever bought. I&apos;ve been using it for
               quite sometime now and it feels brand new each day. Makes me work
               efficiently and effectively. I can decide to work standing up or
               sitting down. The Best.
