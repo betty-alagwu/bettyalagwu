@@ -29,7 +29,7 @@ import { NextSeo } from 'next-seo'
 const seoOptions = {
   url: 'https://betty.rocks',
   name: 'Betty Alagwu',
-  image: 'https://res.cloudinary.com/dq5e0bbl8/image/upload/v1678431588/websites-production/heyme-social-preview-card.png',
+  image: 'https://res.cloudinary.com/dq5e0bbl8/image/upload/v1678883221/Betty_Alagwu_a2ouv5.png',
 }
 
 
