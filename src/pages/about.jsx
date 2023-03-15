@@ -79,10 +79,10 @@ export default function About() {
                and high-performance applications that meet the needs of end-users.
               </p>
               <p>
-              In terms of technical skills, I am proficient in a range of programming languages, including HTML, Tailwind CSS, JavaScript. 
+              In terms of technical skills, I am proficient in a range of programming languages, JavaScript and Typescript, including HTML(markup language) and Tailwind CSS (CSS framework). 
               <br/>
               <br/>
-              I have experience working with popular frameworks such as React, Nextjs, and Typescript, 
+              I have experience working with popular frameworks such as React and Nextjs, 
               and I am comfortable working with a variety of tools such as Git, and Docker.
               </p>
               <p>
