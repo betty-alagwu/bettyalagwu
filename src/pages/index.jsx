@@ -24,6 +24,14 @@ import logoStarbucks from '@/images/logos/starbucks.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
+import { NextSeo } from 'next-seo'
+
+const seoOptions = {
+  url: 'https://betty.rocks',
+  name: 'Betty Alagwu',
+  image: 'https://res.cloudinary.com/dq5e0bbl8/image/upload/v1678431588/websites-production/heyme-social-preview-card.png',
+}
+
 
 function MailIcon(props) {
   return (
@@ -261,11 +269,26 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I&apos;m Betty, a software engineer based in Nigeria. I build solutions to business problems by creating delightful frontend experiences 
+          content="I'm Betty, a software engineer based in Nigeria. I build solutions to business problems by creating delightful frontend experiences 
           and performant applications."
         />
       </Head>
       <Container className="mt-9">
+      <NextSeo
+        title='Betty Alagwu - Software Engineer, Product Manager, and Traveler.'
+        description="I'm Betty, a software engineer living in Lagos Nigeria. I build solutions to business problems by creating delightful frontend experiences and performant applications."
+        openGraph={{
+          images: [{
+            url: seoOptions.image
+          }],
+          siteName: seoOptions.name
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+          site: seoOptions.url,
+          handle: '@bettyalagwu'
+        }}
+      />
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Software Engineer, Product Manager, and Traveler.
