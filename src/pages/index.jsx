@@ -28,7 +28,7 @@ import { NextSeo } from 'next-seo'
 
 const seoOptions = {
   url: 'https://betty.rocks',
-  name: 'Betty Alagwu',
+  // name: 'Betty Alagwu',
   image: 'https://res.cloudinary.com/dq5e0bbl8/image/upload/v1678883221/Betty_Alagwu_a2ouv5.png',
 }
 
@@ -275,13 +275,13 @@ export default function Home({ articles }) {
       </Head>
       <Container className="mt-9">
       <NextSeo
-        title='Betty Alagwu - Software Engineer, Product Manager, and Traveler.'
-        description="I'm Betty, a software engineer living in Lagos Nigeria. I build solutions to business problems by creating delightful frontend experiences and performant applications."
+        title='Software Engineer, Product Manager, and Traveler.'
+        description="I'm Betty, I build performant apps & delightful frontend experiences."
         openGraph={{
           images: [{
             url: seoOptions.image
           }],
-          siteName: seoOptions.name
+          // siteName: seoOptions.name
         }}
         twitter={{
           cardType: 'summary_large_image',
