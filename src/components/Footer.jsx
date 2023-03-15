@@ -13,7 +13,7 @@ function NavLink({ href, children }) {
   )
 }
 
-export function Footer() {
+export function Footer()  {
   return (
     <footer className="mt-32">
       <Container.Outer>
@@ -38,3 +38,5 @@ export function Footer() {
     </footer>
   )
 }
+
+

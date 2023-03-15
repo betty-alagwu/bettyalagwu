@@ -261,7 +261,8 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I’m Betty, a software engineer based in Nigeria. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I&apos;m Betty, a software engineer based in Nigeria. I build solutions to business problems by creating delightful frontend experiences 
+          and performant applications."
         />
       </Head>
       <Container className="mt-9">

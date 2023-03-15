@@ -1,0 +1,17 @@
+{
+    "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+    "editor.formatOnPaste": true,
+    "diffEditor.codeLens": false,
+    "diffEditor.wordWrap": "on",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.fontVariations": false,
+    "editor.fontFamily": "'cascadia Code'",
+    "window.zoomLevel": -0.2,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
+    "editor.fontSize": 10,
+    "breadcrumbs.enabled": false,
+    "editor.minimap.scale": 1
+}
