@@ -1,0 +1,150 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+
+export const meta = {
+  author: ' Betty Alagwu',
+  date: '2023-06-30',
+  title:
+    'How to create ErrorBoundary component in React',
+  description:
+    'In this article, I will be sharing how to create an ErrorBoundary component in React and how to use it to handle errors in your React application.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+In React applications, errors can occur during rendering, in event handlers, or even within asynchronous code. These errors can potentially crash the entire application and leave users frustrated.
+
+However, React provides a powerful feature called error boundaries, which allows you to handle and recover from errors.
+
+In this article, we'll explore how to create an error boundary component and effectively handle errors within a React application.  
+
+## Prerequisites:
+Before diving into the world of error boundaries in React, it is essential to have a few prerequisites.
+* [NodeJS](https://nodejs.org/en/)
+* [ReactJS](https://reactjs.org/)
+* [VSCode](https://code.visualstudio.com/)
+
+## Understanding Error Boundaries:
+
+Error boundaries are React component that catches javascript error anywhere within their child component tree and display an alternative UI instead of crashing the whole application.
+
+## Creating Error Boundary Component:
+To create an error boundary component, you need to follow these steps:
+
+### Step 1:
+Create a class component that extends the `React.Component` class. The class component should have a constructor and a render method. The constructor should have a state property called `hasError`, which is set to false by default.
+
+### Step 2:
+The class component should also have a `getDerivedStateFromError` method, which is used to update the state when an error is thrown. The `getDerivedStateFromError` method takes one parameter: error. The error parameter is the error that was thrown.
+
+### Step 3:
+The class component should also have a `componentDidCatch` method, which is used to log the error to an error reporting service. The `componentDidCatch` method takes two parameters: error and errorInfo. 
+
+The error parameter is the error that was thrown, while the errorInfo parameter is an object with a componentStack key that contains information about which component in the tree threw the error.
+
+
+### Example:
+
+```jsx
+
+import React from 'react'
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { hasError: false }
+  }
+  static getDerivedStateFromError(error) {
+  // This will update state so the next render will show the fallback UI.
+    return { hasError: true }
+  }
+  componentDidCatch(error, errorInfo) {
+  // This will log the error to an error reporting service
+    logErrorToMyService(error, errorInfo)
+  }
+  render() {
+    if (this.state.hasError) {
+    return <h1>Something went wrong.</h1>
+    }
+    return this.props.children
+  }
+}
+
+export default ErrorBoundary
+
+```
+
+In the above code, we define the ErrorBoundary class, which extends the Component class from React. It initializes the state with `hasError` set to false. 
+
+We also define two lifecycle methods, `getDerivedStateFromError` and `componentDidCatch`, to handle errors.
+
+
+## Using Error Boundary Component:
+Now, let's see how to use our ErrorBoundary component to wrap other components that might throw errors.
+
+To handle errors in a React application, you need to follow these steps:
+
+### Step 1:
+
+Create a component that will throw an error. The component should have a button that will throw an error when clicked.
+
+### Example:
+
+```jsx
+
+import React from 'react'
+
+const MyComponent = () => {
+  const handleClick = () => {
+    throw new Error('Error: Something went wrong, please try again later.')
+  }
+  return (
+    <div>
+      <button onClick={handleClick}>Throw Error</button>
+    </div>
+  )
+}
+
+export default MyComponent
+
+```
+By throwing an error inside MyComponent, we trigger the error boundary, and the fallback UI defined in the ErrorBoundary component will be rendered instead.
+
+### Step 2:
+
+Create an error boundary component and wrap the component that will throw an error in the error boundary component.
+
+### Example:
+
+```jsx
+
+const App = () => {
+  return (
+    <div>
+      <ErrorBoundary>
+        <MyComponent />
+      </ErrorBoundary>
+    </div>
+  )
+}
+
+```
+
+In the above code, we import the ErrorBoundary component and wrap our desired component, `MyComponent`, with it. If any error occurs within `MyComponent` or its children components, it will be caught by the ErrorBoundary and render a fallback UI.
+
+After creating an error boundary component and implementing error handling in our React application, the error boundary component will catch the error and render the fallback UI when the button is clicked.
+
+![Error Boundary](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1688150694/Screenshot_2023-06-30_at_4.04.28_PM_qqoypd.png
+)
+
+
+## Conclusion:
+
+Error boundary components are a powerful tool in React for handling and recovering from errors during rendering. By following this guide, you have learned how to create an error boundary component that handle errors gracefully. 
+
+Utilizing error boundaries will enhance the reliability and user experience of your React applications, making them more user-friendly.
+
+Remember, when using error boundaries, it's crucial to log or report the errors appropriately, so you can identify and fix them in the development stage. 
+
+Happy error handling in React!
+
