@@ -4,7 +4,7 @@ export const meta = {
   author: ' Betty Alagwu',
   date: '2024-12-04',
   title:
-    'How to Implement Google Authentication Using React and Typescript',
+    'How to Implement Google Authentication Using React',
   description:
     'In this article, you will learn how to set up secure user sign-ins using Google Cloud Platform, with detailed explanations and best practices for modern web development.',
 }
@@ -13,11 +13,11 @@ export default (props) => <ArticleLayout meta={meta} {...props} />
 
 Google Authentication is a powerful way to allow users to sign in to your application using their Google accounts. By using Google Authentication, you can ensure that only authorized users can access your application, making it secure and user-friendly. 
 
-This tutorial will walk you through on how to integrate Google Authentication into your React application using Typescript. 
+This tutorial will walk you through on how to integrate Google Authentication into your React application. 
 
 ## Prerequisites:
 Before beginning, ensure you have the following prerequisites:
-* Basic understanding of React and TypeScript (no worries, we’ll keep it simple)
+* Basic understanding of React (no worries, we’ll keep it simple)
 * [NodeJS](https://nodejs.org/en/) installed on your computer
 * A Google Cloud Platform account to set up the Google API.
 * Visual Studio Code or another code editor
@@ -80,7 +80,7 @@ The <strong>Authorized redirect URIs</strong> defines the URLs where Google can 
 With our web client ID successfully created, let's move on to our React app, install the necessary packages, and integrate Google login.
 
 ### Step 3: Set Up Your React Project
-* Create a new React app with TypeScript:
+* Create a new React app:
 ```bash
 npx create-react-app my-project --template typescript
 cd my-project
@@ -226,4 +226,10 @@ Implementing Google Authentication in your React application not only enhances u
 
 With this foundation, you can now customize the authentication flow further, such as managing user sessions, handling tokens, or integrating additional Google APIs to enrich your application.
 
-Remember, Google Authentication is a powerful tool for ensuring secure user sign-ins, making your application more secure and user-friendly. Happy coding! 🎉
+Remember, Google Authentication is a powerful tool for ensuring secure user sign-ins, making your application more secure and user-friendly. 
+
+If you have any questions or need further assistance, don't hesitate to reach out to me. 
+
+You can find the source code for this article [here](https://github.com/betty-alagwu/how-to-integrate-google-authentication)
+
+Happy coding! 🎉
