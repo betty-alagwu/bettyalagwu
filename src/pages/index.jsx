@@ -294,7 +294,7 @@ export default function Home({ articles }) {
             Software Engineer, Product Manager, and Traveler.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Betty, a software engineer living in Lagos Nigeria. I build solutions to business problems by creating delightful frontend experiences and performant applications. My personal values are growth, honesty & transparency, and kindness & empathy.
+            I&apos;m Betty, a software engineer living in Lagos Nigeria. I build solutions to business problems by creating delightful frontend experiences and performant applications. My personal values are growth, honesty, transparency, and kindness.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

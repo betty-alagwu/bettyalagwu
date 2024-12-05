@@ -7,7 +7,7 @@
 
 This project is my personal website that serves as an online portfolio and blog. The website is built using modern web technologies including HTML, Tailwind CSS , and JavaScript, Next.js.
 
-![screenshot](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1678720434/bettyrocks-screenshot_ql2lyx.png)
+![screenshot](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733387878/Screenshot_2024-12-05_at_10.36.35_AM_lkhfdl.png)
 
 ## Features 
 The website has the following features:

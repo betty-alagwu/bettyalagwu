@@ -4,6 +4,7 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoText from '@/images/logos/logoText.png'
 import heyme from '@/images/logos/heyme.png'
+import highlight from '@/images/logos/highlight.png'
 
 
 const projects = [
@@ -20,6 +21,13 @@ const projects = [
       'Joplin is an open source note-taking app. Capture your thoughts and securely access them from any device.',
     link: { href: 'https://joplinapp.org/', label: 'Joplin.org' },
     logo: logoText,
+  },
+  {
+    name: 'Highlight (Open source)',
+    description:
+      'Highlight.io is an open source developer tool designed to provide session replay, error monitoring, and performance insights for web applications.',
+    link: { href: 'https://highlight.io/', label: 'Highlight.io' },
+    logo: highlight,
   },
 ]
 

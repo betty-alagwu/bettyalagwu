@@ -69,7 +69,7 @@ export default function About() {
                and performant applications. 
               <br/>
               <br/>
-               My personal values are growth, honesty & transparency, and kindness & empathy.
+                My personal values are growth, honesty, transparency, kindness and empathy.
               </p>
               <p>
               Over the years, I have gained experience in a variety of areas, including web development & product management. 

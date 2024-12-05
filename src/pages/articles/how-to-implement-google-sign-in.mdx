@@ -1,0 +1,229 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: ' Betty Alagwu',
+  date: '2024-12-04',
+  title:
+    'How to Implement Google Authentication Using React and Typescript',
+  description:
+    'In this article, you will learn how to set up secure user sign-ins using Google Cloud Platform, with detailed explanations and best practices for modern web development.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Google Authentication is a powerful way to allow users to sign in to your application using their Google accounts. By using Google Authentication, you can ensure that only authorized users can access your application, making it secure and user-friendly. 
+
+This tutorial will walk you through on how to integrate Google Authentication into your React application using Typescript. 
+
+## Prerequisites:
+Before beginning, ensure you have the following prerequisites:
+* Basic understanding of React and TypeScript (no worries, we’ll keep it simple)
+* [NodeJS](https://nodejs.org/en/) installed on your computer
+* A Google Cloud Platform account to set up the Google API.
+* Visual Studio Code or another code editor
+
+## What Problem Are We Trying to Solve?
+In today’s world, users expect quick and secure ways to access applications without the hassle of creating and remembering new passwords. Traditional username-password systems can lead to frustration and pose security risks if not handled properly.
+
+Google Authentication addresses these issues by providing:
+
+1. A Seamless User Experience: Users can log in with their existing Google accounts, eliminating the need to create a new one.
+2. Enhanced Security: Google’s robust authentication systems ensure secure access to your application.
+
+By implementing Google Authentication, you improve both user experience and application security, making it an essential feature for modern platforms.
+
+### Step 1: Create a Google Cloud Project
+* Go to the [Google Cloud Console](https://console.cloud.google.com/).
+* Create a new project by clicking on the <strong>Create Project</strong> button.
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733328654/Screenshot_2024-12-04_at_6.10.45_PM_m0fnkj.png)
+* After creating the project, you will be redirected to the project dashboard. Select the newly created project and your dashboard should look like this.
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733329228/Screenshot_2024-12-04_at_6.19.24_PM_ignnih.png)
+
+* After the project is created, Click <strong>Create Credentials</strong> and select <strong>OAuth Client ID</strong> to create a client ID.
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733331116/Screenshot_2024-12-04_at_6.48.20_PM_hjhztb.png)
+
+Now to create the client ID, we need to configure the **OAuth consent screen**. 
+
+### What is an OAuth consent screen?
+OAuth consent screen is a page that appears when a user signs in to your application. It asks the user to grant access to your application and the resources it needs to function.
+
+### Step 2: Configure the OAuth consent screen
+* To configure the OAuth consent screen , navigate to the <strong>OAuth consent screen</strong> on the side navigation bar. You'll be presented with an option, select <strong>external</strong>  __ unless you are part of a Google-verified organization or application. 
+
+After that, click the <strong>Create</strong > button to create a consent screen.
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733333255/Screenshot_2024-12-04_at_7.26.09_PM_liv5gk.png)
+
+* Next, to complete the configuration, there are series of steps to configure the consent screen. 
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733335332/Screenshot_2024-12-04_at_8.01.22_PM_urklck.png)
+
+* Now that our consent screen is configured, we need to create a client ID. Navigate back to the <strong>Credentials</strong> section and click on the <strong>OAuth client ID</strong> button.
+
+* You’ll need to choose an application type, as shown below. For a React app, select <strong>Web application</strong> since we’ll be using the Google Client ID specifically for web-based applications.
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733335993/Screenshot_2024-12-04_at_8.11.00_PM_nyzptv.png)
+
+* After that, we'll be adding the two types of URLs that will be used to redirect users to the application after they sign in. <strong>Authorized JavaScript Origins</strong> and <strong>Authorized redirect URLs.</strong>
+
+The <strong>Authorized JavaScript Origins</strong> specifies the URLs where your application is allowed to send requests from the user's browser.
+
+The <strong>Authorized redirect URIs</strong> defines the URLs where Google can redirect users after they authenticate.
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733336962/Screenshot_2024-12-04_at_8.29.06_PM_hcbubd.png)
+
+* After adding the URLs, click <strong>create</strong> to create a client ID.
+* Finally, click the <strong>create</strong>  button to generate your web client ID. You’ll be redirected to the homepage, where the newly created credentials will be displayed. Copy the generated Client ID, as we'll need it later.
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733338051/Screenshot_2024-12-04_at_8.47.13_PM_mwy15w.png)
+
+With our web client ID successfully created, let's move on to our React app, install the necessary packages, and integrate Google login.
+
+### Step 3: Set Up Your React Project
+* Create a new React app with TypeScript:
+```bash
+npx create-react-app my-project --template typescript
+cd my-project
+```
+
+* Install the required package for Google Authentication:
+```bash
+npm install @react-oauth/google
+```
+
+### Step 4: Implement Google Authentication
+We’ll integrate Google Authentication into our React app and wrap the entire application with the GoogleAuthProvider. This ensures that the Google Auth Provider is accessible throughout the app.
+
+```jsx
+// main.jsx
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+      <App />
+    </GoogleOAuthProvider>
+  </StrictMode>,
+)
+```
+
+### Step 5: Implement Google Sign-In
+Now that we have the Google Auth Provider set up, let's implement the sign-in functionality. We'll use the `GoogleLogin` provided by the `@react-oauth/google` package.
+
+```jsx
+// SignIn.jsx
+
+import { useNavigate } from 'react-router-dom';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
+
+export default function SignIn({ setUser }) {
+ const navigate = useNavigate();
+
+ const handleSuccess = (credentialResponse) => {
+    const decodedResponse = jwtDecode(credentialResponse.credential);
+   setUser(decodedResponse);
+   navigate('/home');
+ };
+
+  return (
+    <div className="shadow-2xl">
+        <GoogleLogin
+          onSuccess={handleSuccess}
+          onError={() => {
+           console.log('Login Failed');
+         }}
+       />
+    </div>
+  );
+ }
+
+```
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733348358/Screenshot_2024-12-04_at_11.39.00_PM_xf2enl.png)
+
+The code above demonstrates a straightforward approach to implementing Google login. We imported the GoogleLogin component from `@react-oauth/google` and also using `jwtDecode` from `jwt-decode` to decode the encrypted credentials `GoogleLogin` provides.
+
+Additionally, we defined a `handleSuccess` function that decode the encrypted credentials, sets the user and navigates them to the home page when the login is successful. On failure of the login, we simply log an error message to the console.
+
+![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733351512/Screenshot_2024-12-05_at_12.31.33_AM_pa9nkz.png)
+
+
+### Step 6: Implement Google Log-Out
+
+```jsx
+import { useNavigate } from 'react-router-dom';
+
+export default function Home({ user, setUser }) {
+ const navigate = useNavigate();
+
+ const handleLogout = () => {
+   setUser(null);
+   navigate('/sign-in');
+ };
+
+ return (
+   <div className="p-4">
+     <div className="flex justify-between items-center mb-4 space-x-4">
+       <h1 className="text-2xl">Welcome, {user.name}!</h1>
+       <button 
+         onClick={handleLogout}
+         className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+       >
+         Logout
+       </button>
+     </div>
+     {/* Add your home page content here */}
+   </div>
+ );
+}
+
+// App.jxs
+
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { useState } from 'react';
+import Login from './components/login';
+import Home from './components/home';
+
+
+function App() {
+  const [user, setUser] = useState(null);
+
+  return (
+    <div className='flex justify-start items-center flex-col h-screen'>
+      <BrowserRouter>
+        <Routes>
+          <Route 
+            path="/" 
+            element={user ? <Navigate to="/home" /> : <Login setUser={setUser} />} 
+          />
+          <Route 
+            path="/home" 
+            element={user ? <Home user={user} setUser={setUser} /> : <Navigate to="/" />} 
+          />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App
+
+
+```
+
+The above code shows the implementation of the Google log-out functionality. When the user clicks the "Logout" button, the `handleLogout` function is called, which sets the `user` state to `null` and navigates the user to the sign-in page.
+
+On the `App.jsx`, we check if the user is authenticated by checking the presence of the `user` state. If the user is authenticated, we render the home page, otherwise, we redirect the user to the sign-in page.
+
+## Conclusion
+
+Implementing Google Authentication in your React application not only enhances user experience but also simplifies the login process, making it more secure and user-friendly. In this tutorial, we’ve covered the entire setup process—from creating credentials in the Google Cloud Console to integrating the login and logout functionality in your app using React
+
+With this foundation, you can now customize the authentication flow further, such as managing user sessions, handling tokens, or integrating additional Google APIs to enrich your application.
+
+Remember, Google Authentication is a powerful tool for ensuring secure user sign-ins, making your application more secure and user-friendly. Happy coding! 🎉
