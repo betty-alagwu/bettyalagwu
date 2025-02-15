@@ -6,14 +6,14 @@ export const meta = {
   title:
     'How to Implement Google Authentication Using React',
   description:
-    'In this article, you will learn how to set up secure user sign-ins using Google Cloud Platform, with detailed explanations and best practices for modern web development.',
+    'In this article, you will learn how to set up secure user sign-ins using the Google Cloud Platform, with detailed explanations and best practices for modern web development.',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-Google Authentication is a powerful way to allow users to sign in to your application using their Google accounts. By using Google Authentication, you can ensure that only authorized users can access your application, making it secure and user-friendly. 
+Google Authentication is a powerful way for users to sign in to your application using their Google accounts. Using Google Authentication, you can ensure that only authorized users can access your application, making it secure and user-friendly. 
 
-This tutorial will walk you through on how to integrate Google Authentication into your React application. 
+This tutorial will walk you through integrating Google Authentication into your React application.
 
 ## Prerequisites:
 Before beginning, ensure you have the following prerequisites:
@@ -37,7 +37,7 @@ By implementing Google Authentication, you improve both user experience and appl
 * Create a new project by clicking on the <strong>Create Project</strong> button.
 
 ![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733328654/Screenshot_2024-12-04_at_6.10.45_PM_m0fnkj.png)
-* After creating the project, you will be redirected to the project dashboard. Select the newly created project and your dashboard should look like this.
+* After creating the project, you will be redirected to the project dashboard. Select the newly created project, and your dashboard should look like this.
 
 ![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733329228/Screenshot_2024-12-04_at_6.19.24_PM_ignnih.png)
 
@@ -47,7 +47,7 @@ By implementing Google Authentication, you improve both user experience and appl
 Now to create the client ID, we need to configure the **OAuth consent screen**. 
 
 ### What is an OAuth consent screen?
-OAuth consent screen is a page that appears when a user signs in to your application. It asks the user to grant access to your application and the resources it needs to function.
+The OAuth consent screen is a page that appears when a user signs in to your application. It asks the user to grant access to your application and the resources it needs to function.
 
 ### Step 2: Configure the OAuth consent screen
 * To configure the OAuth consent screen , navigate to the <strong>OAuth consent screen</strong> on the side navigation bar. You'll be presented with an option, select <strong>external</strong>  __ unless you are part of a Google-verified organization or application. 
@@ -146,9 +146,9 @@ export default function SignIn({ setUser }) {
 
 ![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733348358/Screenshot_2024-12-04_at_11.39.00_PM_xf2enl.png)
 
-The code above demonstrates a straightforward approach to implementing Google login. We imported the GoogleLogin component from `@react-oauth/google` and also using `jwtDecode` from `jwt-decode` to decode the encrypted credentials `GoogleLogin` provides.
+The code above demonstrates a straightforward approach to implementing Google login. We imported the GoogleLogin component from `@react-oauth/google` and also used `jwtDecode` from `jwt-decode` to decode the encrypted credentials `GoogleLogin` provides.
 
-Additionally, we defined a `handleSuccess` function that decode the encrypted credentials, sets the user and navigates them to the home page when the login is successful. On failure of the login, we simply log an error message to the console.
+Additionally, we defined a `handleSuccess` function that decodes the encrypted credentials, sets the user, and navigates them to the home page when the login is successful. On login failure, we simply log an error message to the console.
 
 ![](https://res.cloudinary.com/dq5e0bbl8/image/upload/v1733351512/Screenshot_2024-12-05_at_12.31.33_AM_pa9nkz.png)
 
